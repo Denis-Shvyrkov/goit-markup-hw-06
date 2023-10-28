@@ -44,9 +44,13 @@ address {
   font-style: normal;
 }
 
+.section {
+  padding: 96px 0;
+}
+
 .container {
   width: 320px;
-  padding: 96px 16px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -205,6 +209,7 @@ address {
   height: 40%;
   fill: #f4f4fd;
 }
+
 /*-------------------Main------------------- */
 
 /*-------------------Hero------------------- */
@@ -212,15 +217,6 @@ address {
 .hero {
   height: 432px;
   margin: 0 auto;
-}
-
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -229,12 +225,20 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 72px 0;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .hero .container {
+  .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -277,6 +281,7 @@ address {
 }
 
 /*-------------------Features------------------- */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -328,6 +333,7 @@ address {
 }
 
 /*-------------------Team------------------- */
+
 .team {
   background: #f4f4fd;
 }
@@ -340,12 +346,7 @@ address {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-}
-
-.team .container {
-  display: flex;
-  flex-direction: column;
-  gap: 72px;
+  margin-bottom: 72px;
 }
 
 .team-list {
@@ -356,10 +357,6 @@ address {
 }
 
 .team-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
   border-radius: 0px 0px 4px 4px;
   background: #fff;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -373,6 +370,7 @@ address {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 
@@ -426,13 +424,8 @@ address {
   height: 40%;
   fill: #f4f4fd;
 }
-/*-------------------Portfolio------------------- */
 
-.portfolio .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/*-------------------Portfolio------------------- */
 
 .portfolio-item {
   background: #fff;
@@ -520,15 +513,12 @@ address {
 .footer {
   color: #f4f4fd;
   background: #2e2f42;
+  padding-top: 97.5px;
+  padding-bottom: 96px;
 }
 
 .footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 97.5px;
+  padding: 0 16px;
 }
 
 .footer-logo-wrap {
@@ -617,7 +607,6 @@ address {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-bottom: 96px;
 }
 
 .footer-subscribe-title {
@@ -928,7 +917,7 @@ address {
 
   .container {
     width: 768px;
-    padding: 96px 16px;
+    padding: 0px 16px;
     margin: 0 auto;
   }
 
@@ -1031,7 +1020,7 @@ address {
     height: 436px;
   }
 
-  .hero .container {
+  .hero {
     padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1043,7 +1032,7 @@ address {
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .hero .container {
+    .hero {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
@@ -1099,7 +1088,7 @@ address {
   .portfolio-list {
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 104px;
+    row-gap: 72px;
     column-gap: 24px;
   }
 
@@ -1110,13 +1099,11 @@ address {
   /*-------------------Footer-768------------------- */
 
   .footer .container {
-    align-items: flex-start;
-    padding-left: 108px;
+    max-width: 550px;
   }
 
   .footer-logo-soc-wrap {
-    display: flex;
-    justify-content: flex-start;
+    display: inline-flex;
     align-items: flex-start;
     gap: 24px;
   }
@@ -1133,10 +1120,12 @@ address {
     width: 208px;
   }
   .footer-subscribe-container {
+    display: inline-flex;
     align-items: flex-start;
   }
   .subscribe-wrap {
     flex-direction: row;
+    gap: 24px;
   }
 
   /*-------------------Modal-768------------------- */
@@ -1149,13 +1138,13 @@ address {
 /*-------------------Media-1158------------------- */
 
 @media screen and (min-width: 1158px) {
-  .hero {
-    height: 600px;
+  .section {
+    padding: 120px 0;
   }
 
   .container {
     width: 1158px;
-    padding: 120px 16px;
+    padding: 0px 16px;
   }
 
   /*-------------------Header-1158------------------- */
@@ -1181,7 +1170,8 @@ address {
 
   /*-------------------Hero-1158------------------- */
 
-  .hero .container {
+  .hero {
+    height: 600px;
     max-width: 1440px;
     padding: 188px 0;
     background-image: linear-gradient(
@@ -1194,13 +1184,17 @@ address {
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .hero .container {
+    .hero {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
         url(../images/hero-background-2x.jpg);
     }
+  }
+
+  .hero-button {
+    margin-top: 48px;
   }
 
   /*-------------------Features-1158------------------- */
@@ -1250,7 +1244,7 @@ address {
   /*-------------------Team-1158------------------- */
 
   .team .container {
-    padding: 120px 0;
+    padding: 0 16px;
   }
 
   .team-list {
@@ -1282,27 +1276,26 @@ address {
   /*-------------------Footer-1158------------------- */
 
   .footer {
-    display: flex;
-    justify-content: center;
+    padding-top: 101.5px;
+    padding-bottom: 100px;
   }
 
   .footer .container {
+    display: flex;
     flex-direction: row;
-
     align-items: baseline;
-    padding: 100px 16px;
-    margin: unset;
+    padding: 0 16px;
+    margin: 0 auto;
+    max-width: unset;
   }
 
   .footer-logo-wrap {
     margin-right: 120px;
   }
 
-  .footer-soc-wrap {
-    margin-right: 80px;
-  }
   .footer-logo-soc-wrap {
     gap: unset;
+    margin-right: 80px;
   }
 
   .footer-subscribe-container {
